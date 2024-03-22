@@ -23,7 +23,7 @@ const AddEmployee = () => {
         if (result.data.Status) {
           setCategory(result.data.Result);
         } else {
-          alert(result.data.Error);
+          alert('set cat'+result.data.Error);
         }
       })
       .catch((err) => console.log(err));
@@ -45,7 +45,8 @@ const AddEmployee = () => {
         if(result.data.Status) {
             navigate('/dashboard/employee')
         } else {
-            alert(result.data.Error)
+            alert('add emp'+result.data.Error)
+            console.log(result.data.Error)
         }
     })
     .catch(err => console.log(err))
